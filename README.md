@@ -153,12 +153,6 @@ docker run -p 8000:8000 wine-quality-app
 
 ---
 
-## 🙏 Acknowledgements
-
-- Project inspired by [Krish Naik](https://www.youtube.com/c/KrishNaik)  
-- Frontend template by [Colorlib](https://colorlib.com)
-
----
 
 ## 👤 Author
 
