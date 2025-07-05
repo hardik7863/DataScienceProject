@@ -1,2 +1,27 @@
-<h1>{{prediction}} </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="result-card">
+            <h1 class="glow-text">🍷 Wine Quality Prediction</h1>
+            <p class="result-text">Your wine's quality score is: <strong>{{ prediction }}</strong></p>
+            <button onclick="goBack()" class="btn">🔄 Try Again</button>
+        </div>
+    </div>
 
+    <script>
+        gsap.from(".result-card", { duration: 1, opacity: 0, scale: 0.8, ease: "elastic.out(1, 0.3)" });
+
+        function goBack() {
+            gsap.to(".result-card", { duration: 0.5, opacity: 0, scale: 0.5, onComplete: () => window.location.href = "/" });
+        }
+    </script>
+</body>
+</html>
